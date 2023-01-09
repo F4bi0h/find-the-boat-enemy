@@ -1,147 +1,120 @@
-@font-face {
-    font-family: PressStart;
-    src: url('PressStart2P-Regular.ttf') format('opentype');
-  }
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-html, body, main{
-    height: 100%;
-    font-family: PressStart;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
 }
 
-/* area de login */
-.areaLogin{
+html, body {
+    height: 100%;
+    background: url(/img/bg.jpg);
+    background-size: cover;
+}
+
+
+/* 
+    ÁREA LOGIN
+*/
+.area-login{
     height: 100vh;
-    background-image: url(../img/bg.jpg);
-    background-size: cover;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-
-.logo{
-    color: rgb(255, 26, 26);
-}
-
-
-.form{
-    display: flex;
     flex-direction: column;
-    width: 500px;
-    padding-top: 50px;
 }
 
-.form input{
-    padding: 10px;
-    margin-bottom: 5px;
-    box-shadow: 1px 1px 8px rgb(21, 20, 20);
+.area-login img,
+.area-login h1 {
+    margin-bottom: 25px;
 }
 
-
-.form button{
-    padding: 8px;
-    box-shadow: 1px 1px 8px rgb(18, 18, 18);
-}
-
-
-
-/* area do game */
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../img/bg.jpg);
-    background-size: cover;
-}
-
-.informacoes{
-    width: 80vh;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-}
-
-.game{
-    width: 80vh;
-    height: 60vh;
-    background-color: rgba(49, 119, 177, 0.8);
+.area-login input{
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
     border-radius: 5px;
-    padding: 10px;
-    display: flex;
+    outline: auto;
 }
 
-.area_barcos{
-    width: 100%;
-    height: 100%;
+.area-login button {
+    width: 300px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background: darkblue;
+    color: #fff;
+}
+
+
+/* 
+    ÁREA GAME
+*/
+header nav {
+    background-color: #2E445F;
+    box-shadow: 0 0 10px #000;
+    height: 60px;
+    color: #fff;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main {
+    height: 90vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.barcos{
-    width: 10vh;
-    height: 10vh;
+.area-game {
+    width: 120vh;
+    height: 80vh;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    background: rgba(46, 68, 95, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boat,
+.explosion {
+    width: 50px;
     margin: 5px;
-    background-image: url('../img/barco1.png');
-    background-position: center;
-    background-size: cover;
+}
+
+.boat {
     cursor: pointer;
 }
 
-.explosao{
-    width: 10vh;
-    height: 10vh;
-    margin: 5px;
-    background-image: url('../img/Explosion.png');
-    background-position: center;
-    background-size: cover;
-    animation: explodir;
-    animation-duration: 600ms;
-}
-
-@keyframes explodir{
-    from {
-        opacity: 1;
-    }
-
-    from {
-        opacity: 0;
-    }
-}
 
 
-
-/* area win */
-.container-win{
+/* 
+    END GAME
+*/
+.end-game {
+    margin-top: 4.4rem;
     height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(../img/bg.jpg);
-    background-size: cover;
+    flex-direction: column;
+    color: #fff;
+    /* background: rgba(241, 11, 11, .4); */
+    /* background: rgba(24, 180, 24, .4); */
 }
 
-.area-win{
-    width: 40%;
-    text-align: center;
-    color: rgb(26, 26, 26);
-    background-color: rgba(49, 119, 177, 0.8);
-    padding: 30px;
-    border-radius: 5px;
-
+.title-end-game {
+    margin-bottom: 2rem;
+    font-size: 5rem;
 }
 
-.area-win p {
-    margin: 40px;
-    font-size: 20px;
-}
-
-.area-win button {
-    padding: 8px;
-    box-shadow: 1px 1px 8px rgb(18, 18, 18);
-    border-radius: 2px;
+.text-end-game {
+    font-size: 2rem;
 }
