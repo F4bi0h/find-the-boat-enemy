@@ -13,6 +13,16 @@ html, body {
     background-size: cover;
 }
 
+button {
+    width: 300px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background: darkblue;
+    color: #fff;
+}
+
 
 /* 
     ÁREA LOGIN
@@ -38,7 +48,7 @@ html, body {
     outline: auto;
 }
 
-.area-login button {
+/* .area-login button {
     width: 300px;
     padding: 15px;
     cursor: pointer;
@@ -46,7 +56,43 @@ html, body {
     border: none;
     background: darkblue;
     color: #fff;
+} */
+
+
+
+/* INFORMAÇÕES */
+.informations {
+    height: 80%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: rgba(46, 68, 95, 0.7);
+    color: #fff;
 }
+
+.informations h1, p {
+    text-shadow: 0 0 10px #000;
+}
+
+.informations p {
+    width: 70%;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* .informations button {
+    width: 300px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background: darkblue;
+    color: #fff;
+} */
+
 
 
 /* 
@@ -99,13 +145,15 @@ main {
 */
 .end-game {
     margin-top: 4.4rem;
-    height: 100vh;
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
-    color: #fff;
+    height: 40%;
+    text-align: center;
+    color: #000;
+    text-shadow: 0 0 10px #fff;
     /* background: rgba(241, 11, 11, .4); */
     /* background: rgba(24, 180, 24, .4); */
 }

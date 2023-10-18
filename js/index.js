@@ -3,7 +3,7 @@ document.querySelector('button').addEventListener('click', () => {
 
     if(player.length >= 3) {
         localStorage.setItem('Player', JSON.stringify(player));
-        window.location.href = 'game.html';
+        window.location.href = 'informacoes.html';
     } else {
         alert('Informe um nome válido');
     }
