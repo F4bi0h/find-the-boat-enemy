@@ -1,12 +1,3 @@
-/*
-    Encontre o barco inimigo
-    1 pagina de login -> inserir nome do jogador
-    2 criar barcos randomicamente
-    3 ao clicar no barco, ele explode
-    4 mostrar nome do player e tempo decorrido
-    5 ao clicar no barco inimigo o jogo acaba
-*/
-
 class Game {
     constructor() {
         this.timer = 30;
@@ -14,7 +5,7 @@ class Game {
         this.boats = [];
         this.enemy = Math.floor(Math.random() * 83);
         this.checkVictory = false;
-        this.inforPlayer = []
+        this.inforPlayer = [];
 
         this.loadGame();
     }
@@ -57,7 +48,7 @@ class Game {
                 if(b.id == this.enemy) {
                     this.getInforPlayer(true);
                     alert('Barco inimigo encontrado!!!');
-                    window.location.href = 'endGame.html';
+                    window.location.href = 'endGame.php';
                 }
             });
         });
@@ -78,17 +69,17 @@ class Game {
             if(this.timer == 0) {
                 this.getInforPlayer(false);
                 alert('O barco inimigo escapou!!!');
-                window.location.href = 'endGame.html';
+                window.location.href = 'endGame.php';
             }
         }, 1000);
     }
 
     loadGame() {
-        this.showNamePlayer();
         this.createBoat();
         this.createRandomBoats();
         this.boatEnemy();
         this.timerGame();
+        this.showNamePlayer();
     }
 }
 

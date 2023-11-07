@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -39,7 +43,7 @@
         document.querySelector('.player').innerHTML = `Anteção ${JSON.parse(localStorage.getItem('Player'))}`;
 
         document.querySelector('button').addEventListener('click', () => {
-            window.location.href = 'game.html';
+            window.location.href = 'game.php';
         })
     </script>
 </body>
